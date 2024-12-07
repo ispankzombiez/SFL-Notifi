@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SFL Notifi</string>
+    <string name="donate_thank_you">Thank you for considering a donation!</string>
+    <string name="donate_text">You can support us by sending POL, USDC, SFL, or SFL NFT\'s to:</string>
+    <string name="wallet_address">0xa1B7786847410C677fadB526D476d787EA4DEafE</string>
+    <string name="wallet_address_shortened">0xa1...EafE</string>
+    <string name="address_copied">Address copied to clipboard!</string>
+</resources>

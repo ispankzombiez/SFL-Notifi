@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="?attr/primaryTextColor"
+        android:padding="4dp"
+        android:visibility="visible"
+        android:minWidth="48dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/usernameText"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Crops -->
+            <TextView
+                android:id="@+id/cropsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crops"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cropsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Fruit Patches -->
+            <TextView
+                android:id="@+id/fruitPatchesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruit Patches"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fruitPatchesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Greenhouse -->
+            <TextView
+                android:id="@+id/greenhouseHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Greenhouse"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/greenhouseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Flowers -->
+            <TextView
+                android:id="@+id/flowersHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flowers"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/flowersList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Mushrooms -->
+            <TextView
+                android:id="@+id/mushroomsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mushrooms"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mushroomsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Trees -->
+            <TextView
+                android:id="@+id/treesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trees"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/treesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Stones -->
+            <TextView
+                android:id="@+id/stonesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stones"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/stonesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Iron -->
+            <TextView
+                android:id="@+id/ironHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iron"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ironList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Gold -->
+            <TextView
+                android:id="@+id/goldHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/goldList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Crimstones -->
+            <TextView
+                android:id="@+id/crimstonesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crimstones"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/crimstonesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Oil Reserves -->
+            <TextView
+                android:id="@+id/oilReservesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oil Reserves"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/oilReservesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Sunstones -->
+            <TextView
+                android:id="@+id/sunstonesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunstones"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sunstonesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Hen House -->
+            <TextView
+                android:id="@+id/henHouseHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hen House"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/henHouseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Barn -->
+            <TextView
+                android:id="@+id/barnHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Barn"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/barnList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Composters -->
+            <TextView
+                android:id="@+id/compostersHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Composters"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/compostersList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Buildings -->
+            <TextView
+                android:id="@+id/buildingsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buildings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@color/header_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/buildingsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/greenhouseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Greenhouse"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/cropsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crops"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/treesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trees"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/stonesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stones"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/ironButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iron"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/goldButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gold"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/crimstonesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crimstones"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/oilReservesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oil Reserves"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/sunstonesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunstones"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/fruitPatchesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruit Patches"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/flowersButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flowers"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/beehivesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beehives"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buildingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buildings"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/mushroomsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mushrooms"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/usernameButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/henHouseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hen House"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/barnButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Barn"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/craftingBoxButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crafting Box"
+                android:layout_marginBottom="8dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

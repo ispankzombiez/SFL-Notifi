@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="header_background">#2C2C2C</color>  <!-- Darker grey for dark theme -->
+</resources> 
