@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -34,9 +37,9 @@ jobs:
         run: ./gradlew assembleRelease -Pandroid.injected.signing.store.file=keystore.jks -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASS }} -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASS }}
 
       - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
+        uses: actions/upload-release-asset@v2
         env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: app/release/SFL-Notifi.apk
