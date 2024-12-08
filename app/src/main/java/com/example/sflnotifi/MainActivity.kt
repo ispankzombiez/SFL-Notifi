@@ -1018,11 +1018,13 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 } catch (e: ActivityNotFoundException) {
                     Log.e("MainActivity", "Battery optimization settings not available", e)
-                    Toast.makeText(
-                        this,
-                        "Please manually disable battery optimization for this app in settings",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    applicationContext?.let { context ->
+                        Toast.makeText(
+                            context,
+                            "Please manually disable battery optimization for this app in settings",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
                 }
             }
         }
@@ -1037,11 +1039,13 @@ class MainActivity : AppCompatActivity() {
         when (requestCode) {
             NOTIFICATION_PERMISSION_REQUEST_CODE -> {
                 if (grantResults.isNotEmpty() && grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(
-                        this,
-                        "Notifications permission is required for timer alerts",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    applicationContext?.let { context ->
+                        Toast.makeText(
+                            context,
+                            "Notifications permission is required for timer alerts",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
                 }
             }
         }
