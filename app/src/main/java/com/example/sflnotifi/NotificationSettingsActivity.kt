@@ -74,13 +74,18 @@ class NotificationSettingsActivity : AppCompatActivity() {
 
     private fun saveRefreshInterval() {
         try {
-            val hours = binding.hoursInput.text.toString().toIntOrNull() ?: 0
-            val minutes = binding.minutesInput.text.toString().toIntOrNull() ?: 30
-            val days = binding.daysInput.text.toString().toIntOrNull() ?: 0
+            // Handle empty inputs by using empty string checks first
+            val hoursText = binding.hoursInput.text?.toString() ?: ""
+            val minutesText = binding.minutesInput.text?.toString() ?: ""
+            val daysText = binding.daysInput.text?.toString() ?: ""
+            
+            val hours = if (hoursText.isEmpty()) 0 else hoursText.toIntOrNull() ?: 0
+            val minutes = if (minutesText.isEmpty()) 30 else minutesText.toIntOrNull() ?: 30
+            val days = if (daysText.isEmpty()) 0 else daysText.toIntOrNull() ?: 0
             
             // Validate input
             if (hours < 0 || minutes < 0 || minutes >= 60 || days < 0) {
-                Toast.makeText(this, "Invalid time format", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show()
                 return
             }
             
@@ -90,8 +95,8 @@ class NotificationSettingsActivity : AppCompatActivity() {
             
             Toast.makeText(this, "Refresh interval updated", Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
-            Toast.makeText(this, "Error saving refresh interval", Toast.LENGTH_SHORT).show()
             Log.e("NotificationSettings", "Error saving interval", e)
+            Toast.makeText(this, "Error: Invalid input", Toast.LENGTH_SHORT).show()
         }
     }
 
