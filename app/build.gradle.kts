@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.sflnotifi"
+    namespace = "com.app.SFLNotifi"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.sflnotifi"
+        applicationId = "com.app.SFLNotifi"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -35,6 +35,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 

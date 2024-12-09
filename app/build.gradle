@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.sflnotifi'
+    namespace 'com.app.SFLNotifi'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.sflnotifi"
+        applicationId "com.app.SFLNotifi"
         minSdk 24
         targetSdk 34
         versionCode 1
