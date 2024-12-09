@@ -86,7 +86,7 @@ object GrowTimes {
     const val PRIMULA_ENIGMA = 432000 // 120 hours (5 days)
 
     // Mushroom refresh times (in seconds)
-    const val MUSHROOM_REGULAR = 43200    // 12 hours
+    const val MUSHROOM_REGULAR = 57600    // 16 hours
     const val MUSHROOM_MAGIC = 86400      // 24 hours
 }
 
