@@ -43,9 +43,11 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git fetch origin main:main
+          git checkout main
           git add releases/SFL-Notifi-${{ steps.get_version.outputs.VERSION }}.apk
           git commit -m "Add APK for version ${{ steps.get_version.outputs.VERSION }}"
-          git push
+          git push origin main
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
